@@ -1,9 +1,11 @@
-![fritz2](https://www.fritz2.dev/images/fritz2_logo_grey.png)
+# Labibli - A Book manager for families
 
-# A getting-started-template for fritz2-apps.
+Aside from sheer simplicity, I needed specific features 
+like multiple readers for a given book, automated availability
+display/alerts from city libraries etc.
 
-[![video](https://img.youtube.com/vi/c-ybTQdF5xk/0.jpg)](https://www.youtube.com/watch?v=c-ybTQdF5xk)
+## Usage
 
-Please have a look at [fritz2's documentation](https://docs.fritz2.dev) or the [examples](https://www.fritz2.dev/examples.html) to learn, how to use it.
+In the project directory, run `./gradlew jsRun`
 
-If you have any problems with this template, please open an issue at [fritz2](https://github.com/jwstegemann/fritz2/issues).
+Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
