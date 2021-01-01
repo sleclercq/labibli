@@ -3,4 +3,6 @@
  * Created on 12/29/20.
  * @author Stephane Leclercq
  */
-data class Book(val title: String)
+data class Book(val title: String,
+                val author: String,
+                val readBy: List<Reader> = listOf())
