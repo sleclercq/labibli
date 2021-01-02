@@ -10,38 +10,8 @@ val books = listOf(
 
 fun main() {
 
-    val booksStore = object : RootStore<List<Book>>(books) {
-
-        var count = 0
-
-        val addItem = handle { list ->
-            count++
-            list + Book("yet another book title no. $count", "Some Author")
-        }
-
-        val deleteItem = handle<Book> { list, current ->
-            list.minus(current)
-        }
-
-    }
-
     render {
-        div("books") {
-            ul {
-                booksStore.data.renderEach { s ->
-                    li {
-                        button("btn", id = "delete-btn") {
-                            +"${s.title} ${s.author}"
-                            clicks.map { console.log("deleting $s"); s } handledBy booksStore.deleteItem
-                        }
-                    }
-                }
-            }
-            button("button") {
-                +"add an item"
-                clicks handledBy booksStore.addItem
-            }
-        }
+        books(books)
     }.mount("target")
 
 }
