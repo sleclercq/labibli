@@ -12,7 +12,10 @@ fun RenderContext.books(books: List<Book>): Table {
 
         val addItem = handle { list ->
             count++
-            list + Book("yet another book title no. $count", "Some Author")
+            list + Book(
+                "yet another book title no. $count",
+                "Some Author",
+                "978-3-16-148410-${count}")
         }
 
         val deleteItem = handle<Book> { list, current ->

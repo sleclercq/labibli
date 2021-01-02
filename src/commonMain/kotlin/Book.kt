@@ -5,4 +5,4 @@
  */
 data class Book(val title: String,
                 val author: String,
-                val readBy: List<Reader> = listOf())
+                val isbn: String)
